@@ -11,7 +11,7 @@ A comprehensive MCP server that enables Claude Desktop to interact with Fyers tr
 ## 🎬 Demo
 
 <video width="100%" controls>
-  <source src="assets/fyers-mcp.mp4" type="video/mp4">
+  <source src="https://github.com/quantabox/fyers-mcp-server/assets/fyers-mcp.mp4" type="video/mp4">
   Your browser does not support the video tag. <a href="assets/fyers-mcp.mp4">Download the demo video</a>
 </video>
 
