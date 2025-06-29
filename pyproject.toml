@@ -1,0 +1,68 @@
+[project]
+name = "fyers-mcp-server"
+version = "1.0.0"
+description = "Production-ready MCP server for Fyers API v3 with automated OAuth authentication"
+authors = [
+    {name = "Fyers MCP Contributors", email = "contributors@example.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["fyers", "trading", "mcp", "claude", "api", "oauth", "algorithmic-trading"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "mcp>=1.0.0",
+    "fyers-apiv3==3.1.7",
+    "websockets>=12.0",
+    "aiohttp==3.9.3",
+    "requests>=2.31.0",
+    "PyJWT>=2.8.0",
+    "pyotp>=2.9.0",
+    "cryptography>=41.0.0",
+    "pydantic>=2.5.0",
+    "python-dotenv>=1.0.0",
+    "aiofiles>=23.2.1",
+    "structlog>=23.2.0",
+    "selenium>=4.15.0",
+    "webdriver-manager>=4.0.0",
+    "python-dateutil>=2.8.2",
+    "typing-extensions>=4.8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+"Homepage" = "https://github.com/quantabox/fyers-mcp-server"
+"Documentation" = "https://github.com/quantabox/fyers-mcp-server#readme"
+"Repository" = "https://github.com/quantabox/fyers-mcp-server"
+"Issues" = "https://github.com/quantabox/fyers-mcp-server/issues"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["tests"]

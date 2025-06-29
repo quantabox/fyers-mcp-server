@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "fyers-mcp-server": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "<path to the repo>/fyers-mcp-server",
+        "python",
+        "fyers_mcp_complete.py"
+      ],
+      "env": {
+        "PATH": "<path to any uv path, this is optional>",
+        "PYTHONWARNINGS": "ignore"
+      }
+    }
+  }
+}

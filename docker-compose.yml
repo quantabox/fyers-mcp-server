@@ -1,0 +1,14 @@
+services:
+  fyers-mcp:
+    build: .
+    container_name: fyers-mcp-persistent
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    environment:
+      - FYERS_CLIENT_ID=${FYERS_CLIENT_ID}
+      - FYERS_SECRET_KEY=${FYERS_SECRET_KEY}
+      - FYERS_REDIRECT_URI=${FYERS_REDIRECT_URI}
+    volumes:
+      - ./logs:/app/logs
+    command: uv run python fyers_mcp_full.py
